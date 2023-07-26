@@ -4,4 +4,5 @@ phate
 umap-learn
 scanpy
 scikit-learn
+scikit-learn-extra
 scipy
