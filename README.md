@@ -73,7 +73,11 @@ label = pd.read_csv('tcga_label.csv', header=None,
 data= data.to_numpy()
 feed_data = {'data': data}
 manifolder = CCSF(random_state=rngState)
+n = 2000
+sampleix = random.sample(range(data.shape[0]), int(n))
+dataSampled = data[sampleix]
 metric, numClass = manifolder.metric_learning(dataSampled, verbose=False)
+dataSampled = stats.zscore(dataSampled, axis=0, ddof=1)
 num_comp= np.array([numClass-1]) # The number of CDM components to be used
 # to compute the cMAP
 manifolder = CCSF(n_clusters=numClass, num_comp=num_comp,metric=metric)
@@ -135,7 +139,7 @@ plt.title('cPHATE for 32 CCIF components ')
 plt.scatter(embedding[:,0],embedding[:,1],c=label.T,s=0.5)
 plt.xlabel("cPHATE1")
 plt.ylabel("cPHATE2")
-plt.show() 
+plt.show()
 ```
 
 ### Example 4 - Spatial mapping by CCSF
