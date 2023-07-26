@@ -1,0 +1,7 @@
+numpy
+pandas
+phate
+umap-learn
+scanpy
+scikit-learn
+scipy
