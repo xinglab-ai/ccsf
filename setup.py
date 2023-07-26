@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="genomap",
-    version="0.1.0",
+    version="1.0.0",
     author="Md Tauhidul Islam",
     author_email="tauhid@stanford.edu",
     description="Leveraging cell-cell similarity from gene expression data for high-performance spatial and temporal cellular mappings.",
