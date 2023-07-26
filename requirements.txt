@@ -1,3 +1,4 @@
+novosparc
 numpy
 pandas
 phate
