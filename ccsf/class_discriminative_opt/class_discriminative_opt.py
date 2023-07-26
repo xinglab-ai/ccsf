@@ -2,9 +2,7 @@
 """
 @author: Md Tauhidul Islam, Postdoc, Xing Lab,
 Department of Radiation Oncology, Stanford University
- 
 """
-
 
 import numpy as np
 from scipy import linalg
@@ -92,10 +90,6 @@ class ClassDiscriminative_OPT(BaseEstimator, LinearClassifierMixin,
             
         self.scalings_ =eigVecCCIF
         
-        
-
- 
-
     def fit(self, X, y):
         """Fit class-discriminative optimization model 
 

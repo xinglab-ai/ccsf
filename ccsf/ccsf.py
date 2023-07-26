@@ -7,7 +7,7 @@ Department of Radiation Oncology, Stanford University
 """
 import numpy as np
 import pandas as pd
-import umap
+import umap.umap_ as umap
 from sklearn_extra.cluster import KMedoids
 from sklearn.cluster import KMeans
 from sklearn.metrics import pairwise_distances
@@ -16,8 +16,8 @@ import phate
 import novosparc
 from sklearn import metrics as mc
 from scipy.spatial.distance import cdist
-from class_discriminative_opt import ClassDiscriminative_OPT
-from group_centroid_opt import groupCentroidOPT
+from ccsf.class_discriminative_opt import ClassDiscriminative_OPT
+from ccsf.group_centroid_opt import groupCentroidOPT
 from sklearn.preprocessing import normalize
 import scanpy as sc
 
