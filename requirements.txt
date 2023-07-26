@@ -1,3 +1,4 @@
+leidenalg
 novosparc
 numpy
 pandas
