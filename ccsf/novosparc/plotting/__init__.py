@@ -1,1 +1,0 @@
-from ._plotting import plot_gene_patterns, plot_mapped_cells, plot_histogram_intestine, plot_dendrogram, plot_archetypes, plot_spatial_expression_intestine
