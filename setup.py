@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="genomap",
+    name="ccsf",
     version="1.0.0",
     author="Md Tauhidul Islam",
     author_email="tauhid@stanford.edu",
