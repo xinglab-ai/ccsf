@@ -48,7 +48,7 @@ print('metric for cMAP is:', metric)
 # # You are supposed to see 'correlation' as the result.
 ```
 
-### Example 2 - cMAP
+### Example 2 - Dimensionality reduction, visualization and clustering by CCSF
 
 ```python
 # Import all the necessary Python packages
