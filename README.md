@@ -76,7 +76,12 @@ manifolder = CCSF(random_state=rngState)
 n = 2000
 sampleix = random.sample(range(data.shape[0]), int(n))
 dataSampled = data[sampleix]
-metric, numClass = manifolder.metric_learning(dataSampled, verbose=False)
+
+metric='correlation'
+numClass=33 # Choice of the numClass is similar to choosing the number of principal components in PCA
+# If you want to learn the metric and number of data classes, please use the following line
+# metric, numClass = manifolder.metric_learning(dataSampled, verbose=False)
+
 dataSampled = stats.zscore(dataSampled, axis=0, ddof=1)
 num_comp= np.array([numClass-1]) # The number of CDM components to be used
 # to compute the cMAP
@@ -121,10 +126,11 @@ sampleix = random.sample( range( data.shape[0] ), int(n) )
 dataSampled=data[sampleix]
 numInitCls = int(np.floor(data.shape[0]/500))
 dataSampled = stats.zscore(dataSampled, axis=0, ddof=1)
-metric,numClass = manifolder.metric_learning(dataSampled, verbose=False)
-print('metric for cPHATE is:', metric)
+metric='correlation'
+numClass=33 # Choice of the numClass is similar to choosing the number of principal components in PCA
+# If you want to learn the metric and number of data classes, please use the following line
+# metric, numClass = manifolder.metric_learning(dataSampled, verbose=False)
 
-numClass = 33 # Fixed for cellular trajectory analysis tasks
 data = stats.zscore(data, axis=0, ddof=1)
 num_comp = np.array([numClass-1]) # Number of CCSF components
 manifolder = CCSF(n_clusters=numClass, num_comp=num_comp,metric=metric,random_state=rngState)
@@ -177,8 +183,11 @@ dataSampled=data[sampleix]
 manifolder = CCSF(random_state=rngState)
 dataSampled = stats.zscore(dataSampled, axis=0, ddof=1)
 numInitCls=int(np.floor(data.shape[0]/500))
-metric,numClass = manifolder.metric_learning(dataSampled, verbose=False)
-print('metric for CSPARC is:', metric)
+
+metric='correlation'
+numClass=7 # Choice of the numClass is similar to choosing the number of principal components in PCA
+# If you want to learn the metric and number of data classes, use the following line
+# metric,numClass = manifolder.metric_learning(dataSampled, verbose=False)
 
 print ('Reading the target space ... ', end='', flush=True)    
     # Read and use the bdtnp geometry

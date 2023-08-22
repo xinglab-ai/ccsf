@@ -5,6 +5,6 @@ pandas
 phate
 umap-learn
 scanpy
-scikit-learn
+scikit-learn==0.24.0
 scikit-learn-extra
 scipy
