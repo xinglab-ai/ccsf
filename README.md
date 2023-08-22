@@ -7,6 +7,13 @@ The approach exploits the similarity features of the cells for the discovery of 
 For a wide variety of datasets, the proposed approach drastically improves the accuracies of visualization and spatial and temporal mapping analyses as compared to PCA and state-of-the-art techniques. 
 Computationally, the method is about 15 times faster than the existing ones and thus provides an urgently needed technique  for reliable and efficient analysis of genomic data.
 
+## Installation
+The simplest way to install ccsf is to use 
+```python
+pip install ccsf scikit-learn==1.1.1
+```
+
+
 ## Sample data
 
 To run the example codes below, you will need to download data files from [here](https://drive.google.com/drive/u/0/folders/1YNHD7CJeiCioJ21-yWrK8JpZlBYHzfe4).
